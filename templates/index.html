@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChainBoost - Crowdfunding Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to ChainBoost - Crowdfunding Platform</h1>
+    </header>
+    
+    <div class="container">
+        <section id="createProjectSection">
+            <h2>Create a Project</h2>
+            <form id="projectForm">
+                <label for="title">Project Title:</label>
+                <input type="text" id="title" required><br><br>
+                <label for="description">Project Description:</label><br>
+                <textarea id="description" required></textarea><br><br>
+                <label for="fundingGoal">Funding Goal (in ETH):</label>
+                <input type="number" id="fundingGoal" required><br><br>
+                <label for="durationDays">Duration (in days):</label>
+                <input type="number" id="durationDays" required><br><br>
+                <button type="submit">Create Project</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="viewProjectsSection">
+            <h2>Projects</h2>
+            <table id="projectsTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Funding Goal (ETH)</th>
+                        <th>Contribute</th>
+                    </tr>
+                </thead>
+                <tbody id="projectsList">
+                    <!-- Projects will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contributeToProjectSection" style="display: none;">
+            <h2>Contribute to Project</h2>
+            <form id="contributeForm">
+                <label for="projectId">Select Project:</label>
+                <select id="projectId" required>
+                    <!-- Projects will be dynamically added here -->
+                </select><br><br>
+                <label for="contribution">Contribution (in ETH):</label>
+                <input type="number" id="contribution" required><br><br>
+                <button type="submit">Contribute</button>
+            </form>
+        </section>
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
