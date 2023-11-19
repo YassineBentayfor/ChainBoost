@@ -31,7 +31,7 @@ ChainBoost is a decentralized crowdfunding platform built with Flask, SQLite, So
 
 ## Contributors
 
-- Yassine Bentayfor([https://github.com/your-username](https://github.com/YassineBentayfor))
+- Yassine Bentayfor([https://github.com/YassineBentayfor](https://github.com/YassineBentayfor))
 
 ## License
 
